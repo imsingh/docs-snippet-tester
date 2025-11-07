@@ -1,0 +1,20 @@
+{
+  "include": ["docs/**/*.md"],
+  "exclude": ["**/drafts/**"],
+  "runners": {
+    "js": "node -e",
+    "py": "python3 -c"
+  },
+  "templates": {
+    "js": {
+      "default": "./templates/js.template"
+    },
+    "py": {
+      "default": "./templates/python.template"
+    }
+  },
+  "sandbox": {
+    "timeout": 5000
+  },
+  "reporter": "pretty"
+}
