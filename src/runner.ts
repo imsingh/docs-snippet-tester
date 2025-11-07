@@ -19,7 +19,15 @@ export function runSnippet(snippet: Snippet, config: Config): SnippetResult {
   }
 
   const [cmd, ...args] = runnerCmd.split(" ");
-  const result = spawnSync(cmd, [...args, code], {
+  const execArgs = [...args];
+  if (snippet.lang === "js") {
+    execArgs.push("-e", code);
+  } else if (snippet.lang === "python") {
+    execArgs.push("-c", code);
+  } else {
+    execArgs.push(code);
+  }
+  const result = spawnSync(cmd, execArgs, {
     encoding: "utf8",
     timeout: config.sandbox?.timeout || 5000
   });
