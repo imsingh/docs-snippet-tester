@@ -19,7 +19,7 @@ const defaultConfig: Config = {
 };
 
 export function loadConfig(cwd = process.cwd()): Config {
-  const file = path.join(cwd, ".sniptestrc.json");
+  const file = path.join(cwd, ".snippetsrc.json");
   if (!fs.existsSync(file)) return defaultConfig;
   const user = JSON.parse(fs.readFileSync(file, "utf8"));
   return { ...defaultConfig, ...user };

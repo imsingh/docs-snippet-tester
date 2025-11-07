@@ -8,7 +8,7 @@
   },
   "type": "module",
   "bin": {
-    "sniptest": "./dist/cli.js"
+    "docs-snippet-tester": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsc"
