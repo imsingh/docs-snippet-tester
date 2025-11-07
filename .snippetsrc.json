@@ -1,0 +1,15 @@
+{
+  "reporter": "json",
+  "runners": {
+    "js": "node",
+    "python": "python"
+  },
+  "templates": {
+    "js": {
+      "default": "tests/templates/js_template.js"
+    },
+    "python": {
+      "default": "tests/templates/py_template.py"
+    }
+  }
+}
